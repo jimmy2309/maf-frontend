@@ -1,1 +1,62 @@
-<!DOCTYPE html><html><head><title>MAF Frontend</title></head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAF Analytics Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>MAF Ecosystem</h2>
+          <span class="badge">POC</span>
+        </div>
+        <div class="agent-info">
+          <h3>Active Agent</h3>
+          <div class="agent-card">
+            <div class="avatar analytics-avatar"></div>
+            <div>
+              <p class="agent-name">Enterprise Agent</p>
+              <p class="agent-status">Online</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="chat-container">
+        <header class="chat-header">
+          <h1>Verification Workspace</h1>
+          <p>Ask for background checks or company HR policies.</p>
+        </header>
+
+        <div id="chat-messages" class="messages-area">
+          <div class="message agent-message">
+            <div class="message-bubble">
+              Hello! I'm the MAF Enterprise Agent. How can I help you today?
+            </div>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <form id="chat-form">
+            <input 
+              type="text" 
+              id="message-input" 
+              placeholder="Ask about IT department salary..." 
+              autocomplete="off"
+              required 
+            />
+            <button type="submit" id="send-btn">Send</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
